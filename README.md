@@ -3,6 +3,8 @@ oneWeb - Web Tool Stack
 
 node.js base image with node-gyp and some other tools preinstalled:
 
+* java
+* maven
 * node-gyp
 * node-sass
 * lite-server
