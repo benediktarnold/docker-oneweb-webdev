@@ -4,10 +4,10 @@ RUN apk add --update openjdk8 nodejs wget python make g++ \
   && rm -rf /var/cache/apk/*
 
 WORKDIR /opt
-RUN wget https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz \
-  && tar xfz apache-maven-3.2.5-bin.tar.gz \
-  && rm apache-maven-3.2.5-bin.tar.gz
-RUN ln -s /opt/apache-maven-3.2.5/bin/mvn /usr/local/bin/mvn
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
+  && tar xfz apache-maven-3.3.9-bin.tar.gz \
+  && rm apache-maven-3.3.9-bin.tar.gz
+RUN ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
 
 RUN npm install -g node-gyp-install
 RUN node-gyp-install
