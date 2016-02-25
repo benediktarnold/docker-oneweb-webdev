@@ -16,4 +16,5 @@ RUN npm install -g phantomjs
 RUN npm install -g lite-server
 
 RUN mkdir -p /opt/ci && chmod 777 /opt/ci
+RUN mkdir -p /var/opt/data/maven/local && chmod 777 /var/opt/data/maven/local
 WORKDIR /opt/ci
