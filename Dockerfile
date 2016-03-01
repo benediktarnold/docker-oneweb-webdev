@@ -5,9 +5,10 @@ RUN apt-get update \
   && apt-get install -y openjdk-8-jdk
 
 WORKDIR /opt
-RUN wget http://apache.lauf-forum.at/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
-  && tar xfz apache-maven-3.3.9-bin.tar.gz
-ENV PATH=$PATH:/opt/apache-maven-3.3.9/bin
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
+  && tar xfz apache-maven-3.3.9-bin.tar.gz \
+  && rm apache-maven-3.3.9-bin.tar.gz
+RUN ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
 
 RUN npm install -g node-gyp-install
 RUN node-gyp-install
