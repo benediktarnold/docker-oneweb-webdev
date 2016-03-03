@@ -12,7 +12,7 @@ RUN ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
 RUN npm install -g node-gyp-install
 RUN node-gyp-install
 RUN npm install -g node-sass
-RUN npm install -g phantomjs
+RUN npm install -g phantomjs-prebuilt
 RUN npm install -g lite-server
 
 RUN mkdir -p /opt/ci && chmod 777 /opt/ci
