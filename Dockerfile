@@ -17,6 +17,7 @@ RUN npm install -g node-gyp-install
 RUN node-gyp-install
 RUN npm install -g node-sass
 RUN npm install -g lite-server
+RUN npm install -g tslint typescript
 
 RUN mkdir -p /opt/ci && chmod 777 /opt/ci
 RUN mkdir -p /var/opt/data/maven/local && chmod 777 /var/opt/data/maven/local
