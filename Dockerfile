@@ -15,7 +15,7 @@ RUN wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-mav
 RUN ln -s /opt/ci/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
 
 WORKDIR /opt
-ADD https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 phantomjs.tar.bz2
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && mv phantomjs-2.1.1-linux-x86_64.tar.bz2 phantomjs.tar.bz2
 RUN tar xfj phantomjs.tar.bz2 && rm phantomjs.tar.bz2 && ln -s /opt/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 
 WORKDIR /opt/ci
